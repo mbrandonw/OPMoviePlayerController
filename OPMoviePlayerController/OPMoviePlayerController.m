@@ -46,7 +46,7 @@ static NSArray *notificationsAndSelectors;
     if ([self respondsToSelector:selector]) {
       [NSNotificationCenter.defaultCenter addObserver:self selector:selector name:notification object:self];
     } else {
-      NSAssert(false, @"");
+      NSAssert(NO, @"");
     }
   }
 
