@@ -1,9 +1,9 @@
 //
-//  OPMoviePlayerController.h
-//  Kickstarter
+//  OPMoviePlayerController.m
+//  OPMoviePlayerController
 //
 //  Created by Brandon Williams on 7/7/14.
-//  Copyright (c) 2014 Kickstarter. All rights reserved.
+//  Copyright (c) 2014 Opetopic. All rights reserved.
 //
 
 #import <MediaPlayer/MediaPlayer.h>
