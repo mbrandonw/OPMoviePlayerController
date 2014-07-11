@@ -23,7 +23,8 @@
 -(void) moviePlayerPlaybackDidFinish:(OPMoviePlayerController*)moviePlayer;
 -(void) moviePlayerPlaybackStateDidChange:(OPMoviePlayerController*)moviePlayer;
 -(void) moviePlayerScalingModeDidChange:(OPMoviePlayerController*)moviePlayer;
--(void) moviePlayerThumbnailImageRequestDidFinish:(OPMoviePlayerController*)moviePlayer;
+-(void) moviePlayer:(OPMoviePlayerController*)moviePlayer thumbnailImageRequestSucceededWithImage:(UIImage*)image atTime:(NSTimeInterval)time;
+-(void) moviePlayer:(OPMoviePlayerController*)moviePlayer thumbnailImageRequestFailedWithError:(NSError*)error atTime:(NSTimeInterval)time;
 -(void) moviePlayerWillEnterFullscreen:(OPMoviePlayerController*)moviePlayer;
 -(void) moviePlayerWillExitFullscreen:(OPMoviePlayerController*)moviePlayer;
 -(void) moviePlayerSourceTypeAvailable:(OPMoviePlayerController*)moviePlayer;

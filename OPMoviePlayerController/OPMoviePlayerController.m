@@ -128,8 +128,15 @@ static NSArray *notificationsAndSelectors;
 }
 
 -(void) thumbnailImageRequestDidFinish:(NSNotification*)notification {
-  if ([self.delegate respondsToSelector:@selector(moviePlayerThumbnailImageRequestDidFinish:)]) {
-    [self.delegate moviePlayerThumbnailImageRequestDidFinish:self];
+
+  UIImage *image = notification.userInfo[MPMoviePlayerThumbnailImageKey];
+  NSTimeInterval time = [notification.userInfo[MPMoviePlayerThumbnailTimeKey] doubleValue];
+  NSError *error = notification.userInfo[MPMoviePlayerThumbnailErrorKey];
+
+  if (error && [self.delegate respondsToSelector:@selector(moviePlayer:thumbnailImageRequestFailedWithError:atTime:)]) {
+    [self.delegate moviePlayer:self thumbnailImageRequestFailedWithError:error atTime:time];
+  } else if (! error && [self.delegate respondsToSelector:@selector(moviePlayer:thumbnailImageRequestSucceededWithImage:atTime:)]) {
+    [self.delegate moviePlayer:self thumbnailImageRequestSucceededWithImage:image atTime:time];
   }
 }
 
