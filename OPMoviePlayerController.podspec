@@ -9,5 +9,5 @@ Pod::Spec.new do |spec|
   spec.source_files = 'OPCache/*.{h,m}'
   spec.requires_arc = true
 
-  spec.frameworks 'MediaPlayer'
+  spec.frameworks = 'MediaPlayer'
 end
