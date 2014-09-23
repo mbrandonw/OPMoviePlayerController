@@ -6,7 +6,7 @@ Pod::Spec.new do |spec|
   spec.authors      = { 'Brandon Williams' => 'mbw234@gmail.com' }
   spec.summary      = ''
   spec.source       = { :git => 'https://github.com/mbrandonw/OPMoviePlayerController.git' }
-  spec.source_files = 'OPCache/*.{h,m}'
+  spec.source_files = 'OPMoviePlayerController/*.{h,m}'
   spec.requires_arc = true
 
   spec.frameworks = 'MediaPlayer'
